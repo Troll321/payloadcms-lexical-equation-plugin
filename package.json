@@ -1,0 +1,62 @@
+{
+    "name": "payloadcms-lexical-equation-plugin",
+    "version": "1.0.0",
+    "description": "An equation plugin for payloadcms lexical editor. Insert math equation using LaTex notation.",
+    "main": "dist/src/server.feature.js",
+    "types": "dist/src/server.feature.d.ts",
+    "exports": {
+        ".": {
+            "import": "./dist/src/server.feature.js",
+            "types": "./dist/src/server.feature.d.ts"
+        },
+        "./client": {
+            "import": "./dist/src/client.feature.js",
+            "types": "./dist/src/client.feature.d.ts"
+        }
+    },
+    "files": [
+        "dist"
+    ],
+    "type": "module",
+    "scripts": {
+        "build": "tsc"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Troll321/payloadcms-lexical-equation-plugin.git"
+    },
+    "keywords": [
+        "paylaodcms",
+        "lexical",
+        "lexical-editor",
+        "editor",
+        "plugin",
+        "plugins",
+        "latex",
+        "math",
+        "katex",
+        "equation",
+        "notation",
+        "payload"
+    ],
+    "author": "Troll321",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Troll321/payloadcms-lexical-equation-plugin/issues"
+    },
+    "homepage": "https://github.com/Troll321/payloadcms-lexical-equation-plugin#readme",
+    "dependencies": {
+        "katex": "^0.16.28",
+        "react-error-boundary": "^6.1.0"
+    },
+    "peerDependencies": {
+        "@payloadcms/richtext-lexical": "3.74.0"
+    },
+    "devDependencies": {
+        "@payloadcms/richtext-lexical": "^3.74.0",
+        "@types/node": "^25.2.0",
+        "@types/react": "^19.2.11",
+        "react": "^19.2.4",
+        "typescript": "^5.9.3"
+    }
+}
