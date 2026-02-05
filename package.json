@@ -1,6 +1,6 @@
 {
     "name": "payloadcms-lexical-equation-plugin",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "description": "An equation plugin for payloadcms lexical editor. Insert math equation using LaTex notation.",
     "main": "dist/src/server.feature.js",
     "types": "dist/src/server.feature.d.ts",
