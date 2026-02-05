@@ -5,6 +5,7 @@
  * LICENSE file in the root directory of this source tree.
  *
  */
+import "katex/dist/katex.css";
 
 import { useLexicalComposerContext } from "@payloadcms/richtext-lexical/lexical/react/LexicalComposerContext";
 import { $wrapNodeInElement } from "@payloadcms/richtext-lexical/lexical/utils";

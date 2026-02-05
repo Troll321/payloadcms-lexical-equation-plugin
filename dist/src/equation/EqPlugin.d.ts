@@ -5,6 +5,7 @@
  * LICENSE file in the root directory of this source tree.
  *
  */
+import "katex/dist/katex.css";
 import { type LexicalCommand } from "@payloadcms/richtext-lexical/lexical";
 type CommandPayload = {
     equation: string;
