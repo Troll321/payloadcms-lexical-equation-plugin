@@ -30,4 +30,4 @@ export const EquationsPlugin = () => {
     }, [editor]);
     return null;
 };
-//# sourceMappingURL=EqPlugin.jsx.map
+//# sourceMappingURL=EqPlugin.js.map

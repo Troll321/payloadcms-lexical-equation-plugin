@@ -6,6 +6,7 @@
  *
  */
 "use client";
+import { jsx as _jsx, Fragment as _Fragment } from "react/jsx-runtime";
 import { useLexicalComposerContext } from "@payloadcms/richtext-lexical/lexical/react/LexicalComposerContext";
 import { useLexicalEditable } from "@payloadcms/richtext-lexical/lexical/react/useLexicalEditable";
 import { mergeRegister } from "@payloadcms/richtext-lexical/lexical/utils";
@@ -72,14 +73,10 @@ export default function EquationComponent({ equation, inline, nodeKey }) {
             });
         }
     }, [editor, nodeKey, onHide, showEquationEditor, isEditable]);
-    return (<>
-            {showEquationEditor && isEditable ? (<EquationEditor equation={equationValue} setEquation={setEquationValue} inline={inline} ref={inputRef}/>) : (<ErrorBoundary onError={(e) => editor._onError(e)} fallback={null}>
-                    <KatexRenderer equation={equationValue} inline={inline} onDoubleClick={() => {
-                if (isEditable) {
-                    setShowEquationEditor(true);
-                }
-            }}/>
-                </ErrorBoundary>)}
-        </>);
+    return (_jsx(_Fragment, { children: showEquationEditor && isEditable ? (_jsx(EquationEditor, { equation: equationValue, setEquation: setEquationValue, inline: inline, ref: inputRef })) : (_jsx(ErrorBoundary, { onError: (e) => editor._onError(e), fallback: null, children: _jsx(KatexRenderer, { equation: equationValue, inline: inline, onDoubleClick: () => {
+                    if (isEditable) {
+                        setShowEquationEditor(true);
+                    }
+                } }) })) }));
 }
-//# sourceMappingURL=EqComponents.jsx.map
+//# sourceMappingURL=EqComponents.js.map

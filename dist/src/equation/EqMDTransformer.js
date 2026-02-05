@@ -1,4 +1,4 @@
-import { $isEquationNode, EquationNode } from "./EqNode";
+import { $createEquationNode, $isEquationNode, EquationNode } from "./EqNode";
 const InlineEqTransformer = {
     type: "text-match",
     dependencies: [EquationNode],
@@ -11,7 +11,7 @@ const InlineEqTransformer = {
     regExp: /(?<!\S)\$(?!\S)(.*?)(?<!\S)\$(?!\S)/,
     trigger: " ",
     replace: (textNode, match) => {
-        textNode.replace(new EquationNode(match[0].slice(1, match[0].length - 1), true));
+        textNode.replace($createEquationNode(match[0].slice(1, match[0].length - 1), true));
     },
 };
 const BlockEqTransformer = {
@@ -26,7 +26,7 @@ const BlockEqTransformer = {
     trigger: " ",
     regExp: /(?<!\S)\$\$(?!\S)(.*?)(?<!\S)\$\$(?!\S)/,
     replace: (textNode, match) => {
-        textNode.replace(new EquationNode(match[0].slice(2, match[0].length - 2), false));
+        textNode.replace($createEquationNode(match[0].slice(2, match[0].length - 2), false));
     },
 };
 export const EqMDTransformer = [BlockEqTransformer, InlineEqTransformer];

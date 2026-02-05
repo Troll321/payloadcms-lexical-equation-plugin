@@ -1,10 +1,4 @@
-/**
- * Copyright (c) Meta Platforms, Inc. and affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- */
+import { jsx as _jsx } from "react/jsx-runtime";
 import katex from "katex";
 import { $applyNodeReplacement, DecoratorNode } from "@payloadcms/richtext-lexical/lexical";
 import * as React from "react";
@@ -103,7 +97,7 @@ export class EquationNode extends DecoratorNode {
         writable.__equation = equation;
     }
     decorate() {
-        return <EquationComponent equation={this.__equation} inline={this.__inline} nodeKey={this.__key}/>;
+        return _jsx(EquationComponent, { equation: this.__equation, inline: this.__inline, nodeKey: this.__key });
     }
 }
 export function $createEquationNode(equation = "", inline = false) {
@@ -113,4 +107,4 @@ export function $createEquationNode(equation = "", inline = false) {
 export function $isEquationNode(node) {
     return node instanceof EquationNode;
 }
-//# sourceMappingURL=EqNode.jsx.map
+//# sourceMappingURL=EqNode.js.map

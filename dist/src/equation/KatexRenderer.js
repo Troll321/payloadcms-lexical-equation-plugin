@@ -1,10 +1,4 @@
-/**
- * Copyright (c) Meta Platforms, Inc. and affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- */
+import { jsx as _jsx, Fragment as _Fragment, jsxs as _jsxs } from "react/jsx-runtime";
 import katex from "katex";
 import { useEffect, useRef } from "react";
 export default function KatexRenderer({ equation, inline, onDoubleClick, }) {
@@ -26,10 +20,6 @@ export default function KatexRenderer({ equation, inline, onDoubleClick, }) {
     // We use an empty image tag either side to ensure Android doesn't try and compose from the
     // inner text from Katex. There didn't seem to be any other way of making this work,
     // without having a physical space.
-    <>
-            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="0" height="0" alt=""/>
-            <span role="button" tabIndex={-1} onDoubleClick={onDoubleClick} ref={katexElementRef}/>
-            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="0" height="0" alt=""/>
-        </>);
+    _jsxs(_Fragment, { children: [_jsx("img", { src: "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7", width: "0", height: "0", alt: "" }), _jsx("span", { role: "button", tabIndex: -1, onDoubleClick: onDoubleClick, ref: katexElementRef }), _jsx("img", { src: "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7", width: "0", height: "0", alt: "" })] }));
 }
-//# sourceMappingURL=KatexRenderer.jsx.map
+//# sourceMappingURL=KatexRenderer.js.map
