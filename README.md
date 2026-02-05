@@ -8,6 +8,9 @@ Ability to insert LateX Equation to Lexical Editor in payloadcms. The code for t
 
 `npm i payloadcms-lexical-equation-plugin`
 
+**Generate importmap!**. See Payload official docs for further information.
+`npm run payload generate:importmap`
+
 ## Usage
 
 ```ts
