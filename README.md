@@ -25,3 +25,7 @@ export default buildConfig({
     }),
 });
 ```
+
+## IMPORTANT!!!
+
+Use **PAYLOAD VERSION 3.74.0 OR ABOVE**
