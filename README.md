@@ -2,18 +2,39 @@
 
 ## What?
 
-Ability to insert LateX Equation to Lexical Editor in payloadcms. The code for this is taken from lexical playground then copied to be supported in payload lexical editor. Could also be used outiside Payload!
+Ability to insert LateX Equation to Lexical Editor in payloadcms. The code for this is taken from lexical playground then copied to be supported in payload lexical editor.
+
+**Could also be used with normal Lexical outside payload!**
 
 ## Installation
 
 `npm i payloadcms-lexical-equation-plugin`
 
-For Payloadcms, **Generate importmap!** See Payload official docs for further information.
+#### Payload
+
+- Install dependencies
+
+`npm i @payloadcms/richtext-lexical`
+
+- **Generate importmap!** See Payload official docs for further information
+
 `npm run payload generate:importmap`
+
+---
+
+#### Lexical
+
+- Install dependencies
+
+`npm i lexical @lexical/react @lexical/utils @lexical/markdown`
+
+You can remove the `@lexical/markdown` if don't want to use the markdown transformer
 
 ## Usage
 
 ### Payload
+
+`payload.config.ts`
 
 ```ts
 import { EquationFeature } from "payloadcms-lexical-equation-plugin/payload";
@@ -31,7 +52,7 @@ export default buildConfig({
 });
 ```
 
-### Non Payload (normal lexical)
+### Lexical
 
 ```ts
 import { EquationNode, EquationsPlugin } from "payloadcms-lexical-equation-plugin/lexical"
