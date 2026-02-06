@@ -2,16 +2,20 @@
     "name": "payloadcms-lexical-equation-plugin",
     "version": "1.0.6",
     "description": "An equation plugin for payloadcms lexical editor. Insert math equation using LaTex notation.",
-    "main": "dist/src/server.feature.js",
-    "types": "dist/src/server.feature.d.ts",
+    "main": "./dist/src/payload/server.feature.js",
+    "types": "./dist/src/payload/server.feature.d.ts",
     "exports": {
-        ".": {
-            "import": "./dist/src/server.feature.js",
-            "types": "./dist/src/server.feature.d.ts"
+        "./payload": {
+            "import": "./dist/src/payload/server.feature.js",
+            "types": "./dist/src/payload/server.feature.d.ts"
         },
-        "./client": {
-            "import": "./dist/src/client.feature.js",
-            "types": "./dist/src/client.feature.d.ts"
+        "./payload/client": {
+            "import": "./dist/src/payload/client.feature.js",
+            "types": "./dist/src/payload/client.feature.d.ts"
+        },
+        "./lexical": {
+            "import": "./dist/src/_lexical/exports.js",
+            "types": "./dist/src/_lexical/exports.d.ts"
         }
     },
     "files": [
@@ -50,13 +54,16 @@
         "react-error-boundary": "^6.1.0"
     },
     "peerDependencies": {
-        "@payloadcms/richtext-lexical": "^3.74.0",
         "react": "^19.2.1"
     },
     "devDependencies": {
+        "@lexical/markdown": "^0.40.0",
+        "@lexical/react": "^0.40.0",
+        "@lexical/utils": "^0.40.0",
         "@payloadcms/richtext-lexical": "^3.74.0",
         "@types/node": "^25.2.0",
         "@types/react": "^19.2.11",
+        "lexical": "^0.40.0",
         "react": "^19.2.1",
         "typescript": "^5.9.3"
     }

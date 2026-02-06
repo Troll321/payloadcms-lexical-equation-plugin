@@ -42,7 +42,7 @@
         "moduleDetection": "force",
         "skipLibCheck": true,
         "paths": {
-            "payloadcms-lexical-equation-plugin/client": ["./src/client.feature.ts"]
+            "payloadcms-lexical-equation-plugin/payload/client": ["./src/payload/client.feature.ts"]
         }
     },
     "exclude": ["node_modules", "dist"]

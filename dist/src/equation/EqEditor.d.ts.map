@@ -1,1 +1,0 @@
-{"version":3,"file":"EqEditor.d.ts","sourceRoot":"","sources":["../../../src/equation/EqEditor.tsx"],"names":[],"mappings":"AAAA;;;;;;GAMG;AAIH,OAAO,gBAAgB,CAAC;AAIxB,KAAK,uBAAuB,GAAG;IAC3B,QAAQ,EAAE,MAAM,CAAC;IACjB,MAAM,EAAE,OAAO,CAAC;IAChB,WAAW,EAAE,CAAC,QAAQ,EAAE,MAAM,KAAK,IAAI,CAAC;CAC3C,CAAC;;AAsBF,wBAA0C"}
